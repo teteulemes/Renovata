@@ -1,382 +1,700 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Renovata — Vasos Sustentáveis</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Renovata — Vasos Sustentáveis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════
-     NAV
-══════════════════════════════════════ -->
-<nav>
-  <a class="logo-wrap" href="#">
-    <img src="logo-renovata.png" alt="Renovata" class="logo-img" />
-  </a>
-  <ul>
-    <li><a href="#produtos">Produtos</a></li>
-    <li><a href="#processo">Como funciona</a></li>
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#contato" class="nav-cta">Fale conosco</a></li>
-  </ul>
-</nav>
+<!-- NAV -->
+<header class="nav">
+  <a href="#" class="nav-logo"><img src="logo-renovata.png" alt="Renovata"/></a>
+  <nav class="nav-links">
+    <a href="#colecao">Coleção</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#processo">Processo</a>
+    <a href="#contato" class="nav-cta">Falar conosco</a>
+  </nav>
+</header>
 
-<!-- ══════════════════════════════════════
-     HERO
-══════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-text">
-    <p class="hero-eyebrow fade-up">Vasos Sustentáveis</p>
-    <h1 class="fade-up">Plantar é<br/>um ato de<br/><em>renovação</em></h1>
-    <p class="hero-desc fade-up">Vasos criados para crescer com suas plantas — e com você. Materiais sustentáveis, design atemporal, propósito claro.</p>
-    <div class="hero-actions fade-up">
-      <a href="#produtos" class="btn-primary">Ver coleção</a>
-      <a href="#processo" class="btn-text">Como funciona</a>
+  <div class="hero-content">
+    <p class="tag">Vasos Sustentáveis · Brasil</p>
+    <h1>Natureza<br/><em>que dura.</em></h1>
+    <p class="hero-sub">Vasos feitos com materiais 100% renováveis.<br/>Design que envelhece bem. Propósito que fica.</p>
+    <div class="hero-actions">
+      <a href="#colecao" class="btn-dark">Ver coleção</a>
+      <a href="#sobre" class="btn-link">Nossa história →</a>
     </div>
   </div>
-
   <div class="hero-visual">
-    <div class="hero-bg-circle"></div>
-    <img src="logo-renovata.png" alt="Renovata" class="hero-logo-grande" />
-    <span class="hero-tagline">vasos sustentáveis · natureza que se renova</span>
+    <!-- Ilustração hero: vaso grande com planta -->
+    <svg viewBox="0 0 420 560" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+      <!-- Sombra no chão -->
+      <ellipse cx="210" cy="530" rx="110" ry="18" fill="#1A5C32" opacity="0.08"/>
+
+      <!-- VASO PRINCIPAL -->
+      <!-- corpo -->
+      <path d="M110 370 L80 510 Q78 525 210 525 Q342 525 340 510 L310 370 Z"
+            fill="url(#vasoPrimary)"/>
+      <!-- face frontal mais clara -->
+      <path d="M130 378 L104 506 Q102 518 210 518 Q318 518 316 506 L290 378 Z"
+            fill="url(#vasoFront)" opacity="0.6"/>
+      <!-- padrão geométrico inspirado na logo -->
+      <line x1="160" y1="380" x2="148" y2="510" stroke="#0F3D20" stroke-width="0.8" opacity="0.18"/>
+      <line x1="185" y1="376" x2="178" y2="516" stroke="#0F3D20" stroke-width="0.8" opacity="0.18"/>
+      <line x1="210" y1="374" x2="210" y2="520" stroke="#0F3D20" stroke-width="0.8" opacity="0.18"/>
+      <line x1="235" y1="376" x2="242" y2="516" stroke="#0F3D20" stroke-width="0.8" opacity="0.18"/>
+      <line x1="260" y1="380" x2="272" y2="510" stroke="#0F3D20" stroke-width="0.8" opacity="0.18"/>
+      <line x1="100" y1="415" x2="320" y2="415" stroke="#0F3D20" stroke-width="0.8" opacity="0.14"/>
+      <line x1="95" y1="445" x2="325" y2="445" stroke="#0F3D20" stroke-width="0.8" opacity="0.14"/>
+      <line x1="91" y1="476" x2="329" y2="476" stroke="#0F3D20" stroke-width="0.8" opacity="0.14"/>
+      <line x1="88" y1="506" x2="332" y2="506" stroke="#0F3D20" stroke-width="0.8" opacity="0.1"/>
+      <!-- borda topo do vaso -->
+      <rect x="76" y="358" width="268" height="20" rx="4"
+            fill="url(#vasoRim)"/>
+      <rect x="76" y="358" width="268" height="3" rx="1.5"
+            fill="#C8A951" opacity="0.7"/>
+      <!-- terra -->
+      <ellipse cx="210" cy="368" rx="122" ry="16"
+               fill="#3A2010" opacity="0.55"/>
+      <ellipse cx="210" cy="364" rx="110" ry="10"
+               fill="#5A3018" opacity="0.4"/>
+
+      <!-- PLANTA: Costela-de-adão / monstera estilizada -->
+      <!-- caule central -->
+      <path d="M210 362 C210 330 202 298 196 266 C190 234 196 198 210 166 C218 144 214 118 210 92"
+            stroke="#2E7D4A" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+      <!-- Folha 1 — grande, esquerda baixa -->
+      <path d="M200 290
+               C168 274 132 268 112 244
+               C92 220 102 192 128 196
+               C154 200 176 228 192 260
+               C198 272 200 282 200 290Z"
+            fill="url(#leaf1)"/>
+      <!-- nervura central -->
+      <path d="M200 290 C172 264 144 246 118 234"
+            stroke="#1A5C32" stroke-width="2" fill="none" opacity="0.55"/>
+      <!-- nervuras laterais -->
+      <path d="M186 278 C168 268 152 260 136 256" stroke="#1A5C32" stroke-width="1.2" fill="none" opacity="0.35"/>
+      <path d="M192 270 C176 262 162 256 148 254" stroke="#1A5C32" stroke-width="1" fill="none" opacity="0.3"/>
+      <path d="M196 260 C180 254 166 250 154 250" stroke="#1A5C32" stroke-width="1" fill="none" opacity="0.25"/>
+      <!-- buraco folha 1 -->
+      <path d="M162 252 C158 244 158 236 164 234 C170 232 174 240 170 250Z"
+            fill="#F0EBE0" opacity="0.6"/>
+      <path d="M148 266 C142 256 142 246 150 244 C158 242 162 252 156 262Z"
+            fill="#F0EBE0" opacity="0.5"/>
+
+      <!-- Folha 2 — grande, direita baixa -->
+      <path d="M218 268
+               C252 252 290 246 308 220
+               C326 194 314 168 288 174
+               C262 180 238 210 222 248
+               C218 258 216 264 218 268Z"
+            fill="url(#leaf2)"/>
+      <!-- nervura -->
+      <path d="M218 268 C248 244 276 224 302 210"
+            stroke="#1A5C32" stroke-width="2" fill="none" opacity="0.5"/>
+      <path d="M226 260 C248 248 268 236 286 226" stroke="#1A5C32" stroke-width="1.2" fill="none" opacity="0.32"/>
+      <path d="M222 252 C244 242 264 232 280 224" stroke="#1A5C32" stroke-width="1" fill="none" opacity="0.28"/>
+      <!-- buraco folha 2 -->
+      <path d="M268 216 C274 208 282 206 286 212 C290 218 286 228 278 228Z"
+            fill="#F0EBE0" opacity="0.55"/>
+      <path d="M252 228 C258 220 266 218 270 224 C274 230 268 240 260 238Z"
+            fill="#F0EBE0" opacity="0.48"/>
+
+      <!-- Folha 3 — esquerda média -->
+      <path d="M202 238
+               C178 224 150 220 134 202
+               C118 184 126 162 148 166
+               C170 170 190 196 200 224
+               C202 230 202 234 202 238Z"
+            fill="url(#leaf3)"/>
+      <path d="M202 238 C178 216 158 198 140 182"
+            stroke="#1A5C32" stroke-width="1.8" fill="none" opacity="0.45"/>
+      <!-- buraco -->
+      <path d="M164 196 C160 188 162 182 168 182 C174 182 176 190 172 198Z"
+            fill="#F0EBE0" opacity="0.52"/>
+
+      <!-- Folha 4 — direita alta -->
+      <path d="M220 210
+               C248 196 276 192 290 172
+               C304 152 294 130 272 136
+               C250 142 230 168 220 198
+               C218 204 218 208 220 210Z"
+            fill="url(#leaf4)"/>
+      <path d="M220 210 C244 190 268 170 286 154"
+            stroke="#1A5C32" stroke-width="1.8" fill="none" opacity="0.45"/>
+
+      <!-- Folha 5 — topo, pequena -->
+      <path d="M208 150
+               C194 132 182 106 190 90
+               C198 74 216 86 218 110
+               C218 124 212 140 208 150Z"
+            fill="url(#leaf5)"/>
+      <path d="M208 150 C200 128 196 106 194 90"
+            stroke="#1A5C32" stroke-width="1.8" fill="none" opacity="0.45"/>
+
+      <!-- Folha 6 — esquerda alta pequena -->
+      <path d="M198 186
+               C180 174 160 170 150 158
+               C140 146 146 132 160 136
+               C174 140 188 160 196 180Z"
+            fill="url(#leaf6)" opacity="0.75"/>
+
+      <!-- Folha 7 — base direita -->
+      <path d="M215 330
+               C240 316 268 312 278 296
+               C288 280 280 262 264 266
+               C248 270 228 296 216 322Z"
+            fill="url(#leaf7)" opacity="0.65"/>
+
+      <!-- GRADIENTES -->
+      <defs>
+        <linearGradient id="vasoPrimary" x1="110" y1="370" x2="340" y2="525" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#1A5C32"/>
+          <stop offset="100%" stop-color="#0F3D20"/>
+        </linearGradient>
+        <linearGradient id="vasoFront" x1="130" y1="378" x2="290" y2="518" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#2E7D4A"/>
+          <stop offset="100%" stop-color="#1A5C32"/>
+        </linearGradient>
+        <linearGradient id="vasoRim" x1="76" y1="358" x2="344" y2="378" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#1A5C32"/>
+          <stop offset="50%" stop-color="#2E7D4A"/>
+          <stop offset="100%" stop-color="#1A5C32"/>
+        </linearGradient>
+        <linearGradient id="leaf1" x1="112" y1="196" x2="200" y2="290" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#3A9060"/>
+          <stop offset="100%" stop-color="#1A5C32"/>
+        </linearGradient>
+        <linearGradient id="leaf2" x1="218" y1="174" x2="308" y2="268" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#2E7D4A"/>
+          <stop offset="100%" stop-color="#1A5C32"/>
+        </linearGradient>
+        <linearGradient id="leaf3" x1="134" y1="162" x2="202" y2="238" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#4AAA70"/>
+          <stop offset="100%" stop-color="#2E7D4A"/>
+        </linearGradient>
+        <linearGradient id="leaf4" x1="220" y1="130" x2="290" y2="210" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#3A9060"/>
+          <stop offset="100%" stop-color="#1A5C32"/>
+        </linearGradient>
+        <linearGradient id="leaf5" x1="182" y1="90" x2="218" y2="150" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#4AAA70"/>
+          <stop offset="100%" stop-color="#2E7D4A"/>
+        </linearGradient>
+        <linearGradient id="leaf6" x1="150" y1="132" x2="198" y2="186" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#3A9060"/>
+          <stop offset="100%" stop-color="#2E7D4A"/>
+        </linearGradient>
+        <linearGradient id="leaf7" x1="215" y1="262" x2="278" y2="330" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#4AAA70"/>
+          <stop offset="100%" stop-color="#2E7D4A"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <!-- detalhe decorativo -->
+    <div class="hero-deco">
+      <span>100% Sustentável</span>
+    </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     MANIFESTO
-══════════════════════════════════════ -->
-<div class="manifesto">
-  <p class="manifesto-quote">"Cada vaso Renovata é feito para <em>durar, viver</em> e ser devolvido à terra quando chegar a hora."</p>
-  <span class="manifesto-sub">— propósito Renovata · Vasos Sustentáveis</span>
+<!-- NUMBERS BAR -->
+<div class="numbers-bar">
+  <div class="nb-item">
+    <strong>3+</strong><span>Anos no mercado</span>
+  </div>
+  <div class="nb-div"></div>
+  <div class="nb-item">
+    <strong>100%</strong><span>Materiais renováveis</span>
+  </div>
+  <div class="nb-div"></div>
+  <div class="nb-item">
+    <strong>2 mil+</strong><span>Clientes satisfeitos</span>
+  </div>
+  <div class="nb-div"></div>
+  <div class="nb-item">
+    <strong>Zero</strong><span>Resíduo permanente</span>
+  </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     PRODUTOS
-══════════════════════════════════════ -->
-<section class="produtos" id="produtos">
-  <div class="produtos-intro">
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+  <div class="sobre-text">
+    <p class="tag">Nossa essência</p>
+    <h2>Feitos para durar.<br/>Prontos para <em>voltar à terra.</em></h2>
+    <p>Cada vaso Renovata nasce de uma escolha consciente: usar apenas o que a natureza pode regenerar. Bambu, argila reciclada, cimento orgânico. Formas que respeitam o tempo das coisas.</p>
+    <p>Quando um vaso encerra seu ciclo, ele volta. Compostado, devolvido, renovado. Não deixamos rastro — apenas raízes.</p>
+    <a href="#colecao" class="btn-dark">Conhecer a coleção</a>
+  </div>
+  <div class="sobre-grid">
+    <div class="sobre-card">
+      <div class="sobre-icon">
+        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#1A5C32" stroke-width="1.5" opacity="0.2"/><path d="M24 38 C24 26 14 20 14 10 C14 5 18.5 2 24 8 C29.5 2 34 5 34 10 C34 20 24 26 24 38Z" fill="#1A5C32" opacity="0.85"/></svg>
+      </div>
+      <h4>Renovável</h4>
+      <p>Fontes certificadas, colheita controlada.</p>
+    </div>
+    <div class="sobre-card">
+      <div class="sobre-icon">
+        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#1A5C32" stroke-width="1.5" opacity="0.2"/><path d="M14 34 L24 10 L34 34 L24 28Z" fill="#1A5C32" opacity="0.85"/></svg>
+      </div>
+      <h4>Atemporal</h4>
+      <p>Design que dura décadas, não temporadas.</p>
+    </div>
+    <div class="sobre-card">
+      <div class="sobre-icon">
+        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#1A5C32" stroke-width="1.5" opacity="0.2"/><path d="M10 24 C10 16 16 10 24 10 C32 10 38 16 38 24 C38 32 32 38 24 38 C16 38 10 32 10 24Z" stroke="#1A5C32" stroke-width="1.5" fill="none"/><path d="M24 12 L26 20 L34 20 L28 25 L30 33 L24 28 L18 33 L20 25 L14 20 L22 20Z" fill="#1A5C32" opacity="0.75"/></svg>
+      </div>
+      <h4>Impacto real</h4>
+      <p>Parte de cada venda vai para reflorestamento.</p>
+    </div>
+    <div class="sobre-card">
+      <div class="sobre-icon">
+        <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#1A5C32" stroke-width="1.5" opacity="0.2"/><rect x="14" y="28" width="20" height="12" rx="2" fill="#1A5C32" opacity="0.5"/><path d="M24 10 C16 18 14 24 16 30 C18 36 30 36 32 30 C34 24 32 18 24 10Z" fill="#1A5C32" opacity="0.85"/></svg>
+      </div>
+      <h4>Biodegradável</h4>
+      <p>Fim de ciclo limpo. Nenhum resíduo eterno.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COLEÇÃO -->
+<section class="colecao" id="colecao">
+  <div class="colecao-header">
     <div>
-      <p class="section-label">Coleção</p>
-      <h2 class="section-heading">Vasos que contam histórias naturais</h2>
+      <p class="tag">Coleção 2025</p>
+      <h2>Três vasos.<br/><em>Uma filosofia.</em></h2>
     </div>
-    <p>Cada peça é pensada para integrar estética e responsabilidade. Materiais renováveis, formas orgânicas e acabamentos que envelhecem com beleza.</p>
+    <p class="colecao-desc">Cada peça é desenhada para envelhecer com beleza e ser devolvida à terra ao final do ciclo.</p>
   </div>
-  <div class="produtos-grid">
 
-    <!-- Produto 1 -->
-    <div class="produto-card reveal">
-      <div class="produto-img produto-img-1">
-        <svg width="140" height="200" viewBox="0 0 140 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Vaso bambu com textura -->
-          <rect x="30" y="130" width="80" height="60" rx="5" fill="#4A7C3F" opacity="0.3"/>
-          <rect x="33" y="133" width="74" height="54" rx="4" fill="#5A9E50" opacity="0.45"/>
-          <!-- Textura bambu: linhas horizontais -->
-          <line x1="33" y1="148" x2="107" y2="148" stroke="#3A6B30" stroke-width="1.2" opacity="0.4"/>
-          <line x1="33" y1="163" x2="107" y2="163" stroke="#3A6B30" stroke-width="1.2" opacity="0.4"/>
-          <line x1="33" y1="178" x2="107" y2="178" stroke="#3A6B30" stroke-width="1.2" opacity="0.4"/>
-          <!-- nós do bambu -->
-          <rect x="33" y="147" width="74" height="3" rx="1.5" fill="#3A6B30" opacity="0.25"/>
-          <rect x="33" y="162" width="74" height="3" rx="1.5" fill="#3A6B30" opacity="0.25"/>
-          <rect x="33" y="177" width="74" height="3" rx="1.5" fill="#3A6B30" opacity="0.25"/>
-          <!-- Borda topo vaso -->
-          <rect x="25" y="124" width="90" height="12" rx="4" fill="#4A7C3F" opacity="0.4"/>
-          <!-- Terra -->
-          <ellipse cx="70" cy="126" rx="40" ry="6" fill="#5C3D20" opacity="0.5"/>
-          <!-- Caule principal -->
-          <path d="M70 124 C70 104 62 84 58 64 C54 44 60 24 70 10" stroke="#5A9E50" stroke-width="3" stroke-linecap="round" fill="none"/>
-          <!-- Folhas -->
-          <path d="M62 80 C44 68 26 64 22 48 C18 32 40 26 58 46 C64 54 64 70 62 80Z" fill="#4A9E6B" opacity="0.9"/>
-          <path d="M62 80 C52 62 40 54 28 44" stroke="#2E7D52" stroke-width="1.5" fill="none" opacity="0.5"/>
-          <path d="M74 60 C92 48 110 44 114 28 C118 12 96 8 76 28 C70 36 70 52 74 60Z" fill="#3A8A5C" opacity="0.85"/>
-          <path d="M74 60 C84 44 96 36 110 26" stroke="#2E7D52" stroke-width="1.5" fill="none" opacity="0.5"/>
-          <path d="M68 30 C56 20 48 6 56 -2 C64 -10 78 4 76 22 C75 28 70 30 68 30Z" fill="#4A9E6B" opacity="0.8"/>
-          <path d="M68 102 C52 94 36 90 34 76 C32 62 50 58 66 72 C70 78 70 94 68 102Z" fill="#6AAB65" opacity="0.7"/>
-          <!-- detalhe dourado na borda do vaso -->
-          <rect x="25" y="124" width="90" height="2" rx="1" fill="#C9A84C" opacity="0.5"/>
-        </svg>
-      </div>
-      <div class="produto-info">
-        <p class="produto-tag">Bambu Natural</p>
-        <h3 class="produto-nome">Vaso Sereno</h3>
-        <p class="produto-desc">Fibra de bambu prensada, 100% biodegradável. Ideal para plantas de interior.</p>
-        <div class="produto-footer">
-          <span class="produto-preco">R$ 89</span>
-          <a href="#contato" class="produto-btn">+</a>
-        </div>
+  <!-- Produto 1 -->
+  <div class="produto" id="p1">
+    <div class="produto-visual v1">
+      <!-- Vaso Sereno: bambu, cilíndrico, linhas horizontais -->
+      <svg viewBox="0 0 340 420" fill="none" class="produto-svg">
+        <ellipse cx="170" cy="390" rx="100" ry="14" fill="#1A5C32" opacity="0.07"/>
+        <!-- vaso -->
+        <path d="M72 280 L55 375 Q53 388 170 388 Q287 388 285 375 L268 280 Z" fill="url(#b1)"/>
+        <path d="M80 286 L64 372 Q62 382 170 382 Q278 382 276 372 L260 286 Z" fill="url(#b2)" opacity="0.5"/>
+        <!-- nós bambu detalhados -->
+        <line x1="70" y1="310" x2="270" y2="310" stroke="#0F3D20" stroke-width="1" opacity="0.2"/>
+        <rect x="55" y="308" width="230" height="4" rx="2" fill="#1A5C32" opacity="0.15"/>
+        <line x1="66" y1="338" x2="274" y2="338" stroke="#0F3D20" stroke-width="1" opacity="0.2"/>
+        <rect x="53" y="336" width="234" height="4" rx="2" fill="#1A5C32" opacity="0.15"/>
+        <line x1="61" y1="366" x2="279" y2="366" stroke="#0F3D20" stroke-width="1" opacity="0.2"/>
+        <rect x="52" y="364" width="236" height="4" rx="2" fill="#1A5C32" opacity="0.13"/>
+        <!-- textura vertical bambu -->
+        <line x1="103" y1="282" x2="95" y2="384" stroke="#0F3D20" stroke-width="0.7" opacity="0.12"/>
+        <line x1="136" y1="280" x2="130" y2="386" stroke="#0F3D20" stroke-width="0.7" opacity="0.12"/>
+        <line x1="170" y1="280" x2="170" y2="388" stroke="#0F3D20" stroke-width="0.7" opacity="0.12"/>
+        <line x1="204" y1="280" x2="210" y2="386" stroke="#0F3D20" stroke-width="0.7" opacity="0.12"/>
+        <line x1="237" y1="282" x2="245" y2="384" stroke="#0F3D20" stroke-width="0.7" opacity="0.12"/>
+        <!-- borda topo -->
+        <rect x="48" y="268" width="244" height="16" rx="4" fill="url(#brim1)"/>
+        <rect x="48" y="268" width="244" height="3" rx="1.5" fill="#C8A951" opacity="0.6"/>
+        <!-- terra -->
+        <ellipse cx="170" cy="276" rx="110" ry="13" fill="#3A2010" opacity="0.55"/>
+        <!-- caule -->
+        <path d="M170 272 C170 248 162 224 158 200 C154 176 160 148 170 124" stroke="#3A8A56" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <!-- folha esq grande -->
+        <path d="M162 220 C134 206 102 200 86 180 C70 160 80 136 104 140 C128 144 152 172 162 208 C164 214 162 218 162 220Z" fill="url(#lf1)"/>
+        <path d="M162 220 C138 198 116 182 90 168" stroke="#0F3D20" stroke-width="2" fill="none" opacity="0.4"/>
+        <path d="M152 210 C132 196 114 186 98 176" stroke="#0F3D20" stroke-width="1" fill="none" opacity="0.28"/>
+        <path d="M156 200 C140 192 124 186 110 184" stroke="#0F3D20" stroke-width="1" fill="none" opacity="0.25"/>
+        <!-- folha dir grande -->
+        <path d="M178 200 C208 186 238 180 252 160 C266 140 256 116 232 122 C208 128 184 156 178 192 C176 196 176 198 178 200Z" fill="url(#lf2)"/>
+        <path d="M178 200 C200 178 224 160 248 144" stroke="#0F3D20" stroke-width="2" fill="none" opacity="0.4"/>
+        <path d="M182 192 C202 174 222 160 242 148" stroke="#0F3D20" stroke-width="1" fill="none" opacity="0.28"/>
+        <!-- folha topo -->
+        <path d="M167 150 C152 132 142 106 150 92 C158 78 172 90 174 116 C174 130 170 144 167 150Z" fill="url(#lf3)"/>
+        <path d="M167 150 C158 128 154 108 154 94" stroke="#0F3D20" stroke-width="2" fill="none" opacity="0.4"/>
+        <!-- folha esq baixo -->
+        <path d="M164 256 C140 244 112 240 100 222 C88 204 98 184 118 190 C138 196 158 224 164 252Z" fill="url(#lf4)" opacity="0.7"/>
+        <defs>
+          <linearGradient id="b1" x1="72" y1="280" x2="268" y2="388" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#2E7D4A"/><stop offset="100%" stop-color="#0F3D20"/>
+          </linearGradient>
+          <linearGradient id="b2" x1="80" y1="286" x2="260" y2="382" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#3A9060"/><stop offset="100%" stop-color="#1A5C32"/>
+          </linearGradient>
+          <linearGradient id="brim1" x1="48" y1="268" x2="292" y2="284" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#1A5C32"/><stop offset="50%" stop-color="#2E7D4A"/><stop offset="100%" stop-color="#1A5C32"/>
+          </linearGradient>
+          <linearGradient id="lf1" x1="86" y1="136" x2="162" y2="220" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4AAA70"/><stop offset="100%" stop-color="#1A5C32"/>
+          </linearGradient>
+          <linearGradient id="lf2" x1="178" y1="116" x2="252" y2="200" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#3A9060"/><stop offset="100%" stop-color="#1A5C32"/>
+          </linearGradient>
+          <linearGradient id="lf3" x1="142" y1="78" x2="174" y2="150" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4AAA70"/><stop offset="100%" stop-color="#2E7D4A"/>
+          </linearGradient>
+          <linearGradient id="lf4" x1="100" y1="184" x2="164" y2="256" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#3A9060"/><stop offset="100%" stop-color="#2E7D4A"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="produto-info">
+      <span class="prod-num">01</span>
+      <p class="tag">Bambu Natural</p>
+      <h3>Vaso<br/>Sereno</h3>
+      <p class="prod-desc">Fibra de bambu prensada a frio, 100% biodegradável. Textura natural única que muda levemente com o tempo — como tudo que é vivo. Ideal para plantas de interior com rega moderada.</p>
+      <ul class="prod-specs">
+        <li><span>Material</span> Bambu prensado certificado</li>
+        <li><span>Acabamento</span> Natural envelhecido</li>
+        <li><span>Ideal para</span> Interior · rega moderada</li>
+        <li><span>Ciclo</span> 100% compostável</li>
+      </ul>
+      <div class="prod-footer">
+        <div class="prod-price">R$ 89</div>
+        <a href="#contato" class="btn-dark">Solicitar</a>
       </div>
     </div>
+  </div>
 
-    <!-- Produto 2 -->
-    <div class="produto-card reveal">
-      <div class="produto-img produto-img-2">
-        <svg width="140" height="200" viewBox="0 0 140 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Vaso argila com padrão geométrico (referência logo) -->
-          <path d="M25 185 L32 128 Q34 118 70 118 Q106 118 108 128 L115 185 Q113 195 70 195 Q27 195 25 185Z" fill="#C9A84C" opacity="0.25"/>
-          <path d="M28 183 L35 130 Q37 122 70 122 Q103 122 105 130 L112 183 Q110 191 70 191 Q30 191 28 183Z" fill="#B8960C" opacity="0.35"/>
-          <!-- Padrão geométrico triângulos (como na logo) -->
-          <line x1="35" y1="140" x2="105" y2="140" stroke="#9E7B1A" stroke-width="0.8" opacity="0.4"/>
-          <line x1="35" y1="155" x2="105" y2="155" stroke="#9E7B1A" stroke-width="0.8" opacity="0.4"/>
-          <line x1="35" y1="170" x2="105" y2="170" stroke="#9E7B1A" stroke-width="0.8" opacity="0.4"/>
-          <line x1="52" y1="122" x2="42" y2="191" stroke="#9E7B1A" stroke-width="0.8" opacity="0.3"/>
-          <line x1="70" y1="118" x2="70" y2="195" stroke="#9E7B1A" stroke-width="0.8" opacity="0.3"/>
-          <line x1="88" y1="122" x2="98" y2="191" stroke="#9E7B1A" stroke-width="0.8" opacity="0.3"/>
-          <!-- borda topo vaso -->
-          <rect x="18" y="112" width="104" height="12" rx="5" fill="#C9A84C" opacity="0.4"/>
-          <ellipse cx="70" cy="112" rx="52" ry="7" fill="#C9A84C" opacity="0.2"/>
-          <!-- Terra -->
-          <ellipse cx="70" cy="113" rx="44" ry="7" fill="#5C3D20" opacity="0.45"/>
-          <!-- Caule -->
-          <path d="M70 112 C60 92 52 70 56 50 C60 30 74 16 70 4" stroke="#5A9E50" stroke-width="3" stroke-linecap="round" fill="none"/>
-          <!-- Suculenta / lotus (ref logo) -->
-          <path d="M70 40 C64 30 56 18 62 10 C68 2 76 14 74 28 C72 34 70 38 70 40Z" fill="#4A9E6B"/>
-          <path d="M70 40 C78 30 86 20 82 10 C78 2 70 14 70 28 C70 34 70 38 70 40Z" fill="#3A8A5C" opacity="0.85"/>
-          <path d="M70 40 C56 36 44 28 46 18 C48 8 64 12 70 28 C70 34 70 38 70 40Z" fill="#6AAB65" opacity="0.8"/>
-          <path d="M70 40 C84 36 96 28 94 18 C92 8 76 12 70 28 C70 34 70 38 70 40Z" fill="#4A9E6B" opacity="0.8"/>
-          <circle cx="70" cy="42" r="6" fill="#C9A84C" opacity="0.6"/>
-          <circle cx="70" cy="42" r="3" fill="#E8C96A"/>
-          <!-- detalhe dourado vaso -->
-          <rect x="18" y="122" width="104" height="2" rx="1" fill="#C9A84C" opacity="0.6"/>
-        </svg>
-      </div>
-      <div class="produto-info">
-        <p class="produto-tag">Argila Reciclada</p>
-        <h3 class="produto-nome">Vaso Raiz</h3>
-        <p class="produto-desc">Argila mista com pó de resíduos agrícolas. Resistente e com alma artesanal.</p>
-        <div class="produto-footer">
-          <span class="produto-preco">R$ 124</span>
-          <a href="#contato" class="produto-btn">+</a>
-        </div>
+  <!-- Produto 2 -->
+  <div class="produto reverse" id="p2">
+    <div class="produto-visual v2">
+      <!-- Vaso Raiz: argila, forma afunilada, padrão geométrico logo -->
+      <svg viewBox="0 0 340 420" fill="none" class="produto-svg">
+        <ellipse cx="170" cy="400" rx="105" ry="14" fill="#C8A951" opacity="0.08"/>
+        <!-- corpo do vaso afunilado -->
+        <path d="M60 280 L40 390 Q38 404 170 404 Q302 404 300 390 L280 280 Z" fill="url(#r1)"/>
+        <path d="M68 286 L50 386 Q48 398 170 398 Q292 398 290 386 L272 286 Z" fill="url(#r2)" opacity="0.45"/>
+        <!-- padrão geométrico triângulos (identidade logo) -->
+        <line x1="60" y1="308" x2="280" y2="308" stroke="#6A4A0A" stroke-width="0.9" opacity="0.35"/>
+        <line x1="56" y1="338" x2="284" y2="338" stroke="#6A4A0A" stroke-width="0.9" opacity="0.35"/>
+        <line x1="51" y1="368" x2="289" y2="368" stroke="#6A4A0A" stroke-width="0.9" opacity="0.35"/>
+        <line x1="46" y1="396" x2="294" y2="396" stroke="#6A4A0A" stroke-width="0.9" opacity="0.28"/>
+        <line x1="100" y1="282" x2="86" y2="402" stroke="#6A4A0A" stroke-width="0.9" opacity="0.28"/>
+        <line x1="135" y1="280" x2="126" y2="402" stroke="#6A4A0A" stroke-width="0.9" opacity="0.28"/>
+        <line x1="170" y1="280" x2="170" y2="404" stroke="#6A4A0A" stroke-width="0.9" opacity="0.28"/>
+        <line x1="205" y1="280" x2="214" y2="402" stroke="#6A4A0A" stroke-width="0.9" opacity="0.28"/>
+        <line x1="240" y1="282" x2="254" y2="402" stroke="#6A4A0A" stroke-width="0.9" opacity="0.28"/>
+        <!-- pontos interseção dourados -->
+        <circle cx="100" cy="308" r="2.2" fill="#C8A951" opacity="0.55"/>
+        <circle cx="135" cy="308" r="2.2" fill="#C8A951" opacity="0.55"/>
+        <circle cx="170" cy="308" r="2.2" fill="#C8A951" opacity="0.55"/>
+        <circle cx="205" cy="308" r="2.2" fill="#C8A951" opacity="0.55"/>
+        <circle cx="240" cy="308" r="2.2" fill="#C8A951" opacity="0.55"/>
+        <circle cx="98" cy="338" r="2" fill="#C8A951" opacity="0.45"/>
+        <circle cx="133" cy="338" r="2" fill="#C8A951" opacity="0.45"/>
+        <circle cx="170" cy="338" r="2" fill="#C8A951" opacity="0.45"/>
+        <circle cx="207" cy="338" r="2" fill="#C8A951" opacity="0.45"/>
+        <circle cx="242" cy="338" r="2" fill="#C8A951" opacity="0.45"/>
+        <!-- borda topo dourada -->
+        <rect x="40" y="266" width="260" height="18" rx="5" fill="url(#rbrim)"/>
+        <ellipse cx="170" cy="266" rx="130" ry="10" fill="#C8A951" opacity="0.15"/>
+        <rect x="40" y="280" width="260" height="3" rx="1.5" fill="#C8A951" opacity="0.65"/>
+        <!-- terra -->
+        <ellipse cx="170" cy="272" rx="116" ry="14" fill="#3A2010" opacity="0.52"/>
+        <!-- lotus / suculenta inspirada na logo -->
+        <path d="M170 268 C160 246 152 222 156 200 C160 178 170 158 170 132" stroke="#3A8A56" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <!-- pétalas externas lotus -->
+        <path d="M170 120 C156 100 146 72 156 58 C166 44 180 62 178 88 C176 104 172 116 170 120Z" fill="url(#rl1)"/>
+        <path d="M170 120 C184 100 194 72 184 58 C174 44 160 62 162 88 C164 104 168 116 170 120Z" fill="url(#rl2)"/>
+        <path d="M170 120 C150 110 130 96 130 80 C130 64 150 62 164 84 C168 94 170 110 170 120Z" fill="url(#rl3)"/>
+        <path d="M170 120 C190 110 210 96 210 80 C210 64 190 62 176 84 C172 94 170 110 170 120Z" fill="url(#rl4)"/>
+        <!-- pétalas internas -->
+        <path d="M170 118 C162 106 158 92 162 84 C166 76 174 82 174 96 C174 106 172 114 170 118Z" fill="url(#rl5)" opacity="0.85"/>
+        <path d="M170 118 C178 106 182 92 178 84 C174 76 166 82 166 96 C166 106 168 114 170 118Z" fill="url(#rl6)" opacity="0.85"/>
+        <!-- centro dourado lotus -->
+        <ellipse cx="170" cy="116" rx="12" ry="9" fill="#C8A951" opacity="0.75"/>
+        <ellipse cx="170" cy="116" rx="7" ry="5" fill="#E8CB78" opacity="0.95"/>
+        <ellipse cx="170" cy="116" rx="3.5" ry="2.5" fill="#FAF8F3"/>
+        <!-- folhas laterais -->
+        <path d="M160 210 C134 196 104 192 90 172 C76 152 88 130 110 138 C132 146 154 178 160 206Z" fill="url(#rl7)" opacity="0.75"/>
+        <path d="M180 210 C206 196 236 192 250 172 C264 152 252 130 230 138 C208 146 186 178 180 206Z" fill="url(#rl8)" opacity="0.75"/>
+        <defs>
+          <linearGradient id="r1" x1="60" y1="280" x2="280" y2="404" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#C8A951"/><stop offset="100%" stop-color="#8A6A10"/>
+          </linearGradient>
+          <linearGradient id="r2" x1="68" y1="286" x2="272" y2="398" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#E8CB78"/><stop offset="100%" stop-color="#C8A951"/>
+          </linearGradient>
+          <linearGradient id="rbrim" x1="40" y1="266" x2="300" y2="284" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#8A6A10"/><stop offset="50%" stop-color="#C8A951"/><stop offset="100%" stop-color="#8A6A10"/>
+          </linearGradient>
+          <linearGradient id="rl1" x1="146" y1="44" x2="178" y2="120" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4AAA70"/><stop offset="100%" stop-color="#1A5C32"/>
+          </linearGradient>
+          <linearGradient id="rl2" x1="160" y1="44" x2="194" y2="120" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#3A9060"/><stop offset="100%" stop-color="#1A5C32"/>
+          </linearGradient>
+          <linearGradient id="rl3" x1="130" y1="62" x2="170" y2="120" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4AAA70"/><stop offset="100%" stop-color="#2E7D4A"/>
+          </linearGradient>
+          <linearGradient id="rl4" x1="170" y1="62" x2="210" y2="120" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#3A9060"/><stop offset="100%" stop-color="#2E7D4A"/>
+          </linearGradient>
+          <linearGradient id="rl5" x1="158" y1="76" x2="174" y2="118" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4AAA70"/><stop offset="100%" stop-color="#2E7D4A"/>
+          </linearGradient>
+          <linearGradient id="rl6" x1="166" y1="76" x2="182" y2="118" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#3A9060"/><stop offset="100%" stop-color="#1A5C32"/>
+          </linearGradient>
+          <linearGradient id="rl7" x1="90" y1="130" x2="160" y2="210" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4AAA70"/><stop offset="100%" stop-color="#1A5C32"/>
+          </linearGradient>
+          <linearGradient id="rl8" x1="180" y1="130" x2="250" y2="210" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#3A9060"/><stop offset="100%" stop-color="#1A5C32"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="produto-info">
+      <span class="prod-num">02</span>
+      <p class="tag">Argila Reciclada</p>
+      <h3>Vaso<br/>Raiz</h3>
+      <p class="prod-desc">Argila mista com pó de resíduos agrícolas. O padrão geométrico é gravado à mão, tornando cada peça única. Resistente à umidade e com visual que remete às origens da Renovata.</p>
+      <ul class="prod-specs">
+        <li><span>Material</span> Argila + resíduo agrícola</li>
+        <li><span>Acabamento</span> Geométrico artesanal</li>
+        <li><span>Ideal para</span> Interior e varanda</li>
+        <li><span>Ciclo</span> 100% compostável</li>
+      </ul>
+      <div class="prod-footer">
+        <div class="prod-price">R$ 124</div>
+        <a href="#contato" class="btn-dark">Solicitar</a>
       </div>
     </div>
+  </div>
 
-    <!-- Produto 3 -->
-    <div class="produto-card reveal">
-      <div class="produto-img produto-img-3">
-        <svg width="140" height="200" viewBox="0 0 140 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Vaso concreto moderno / cilíndrico -->
-          <rect x="28" y="130" width="84" height="62" rx="3" fill="#6B7D6E" opacity="0.3"/>
-          <rect x="31" y="133" width="78" height="56" rx="2" fill="#7A8E7D" opacity="0.4"/>
-          <!-- textura concreto: pontilhado sutil -->
-          <rect x="38" y="140" width="2" height="2" rx="1" fill="#4A5E4D" opacity="0.3"/>
-          <rect x="50" y="145" width="2" height="2" rx="1" fill="#4A5E4D" opacity="0.3"/>
-          <rect x="65" y="138" width="2" height="2" rx="1" fill="#4A5E4D" opacity="0.3"/>
-          <rect x="80" y="148" width="2" height="2" rx="1" fill="#4A5E4D" opacity="0.3"/>
-          <rect x="95" y="141" width="2" height="2" rx="1" fill="#4A5E4D" opacity="0.3"/>
-          <rect x="42" y="158" width="2" height="2" rx="1" fill="#4A5E4D" opacity="0.25"/>
-          <rect x="72" y="162" width="2" height="2" rx="1" fill="#4A5E4D" opacity="0.25"/>
-          <rect x="88" y="155" width="2" height="2" rx="1" fill="#4A5E4D" opacity="0.25"/>
-          <!-- Borda topo -->
-          <rect x="22" y="124" width="96" height="10" rx="3" fill="#5A6E5D" opacity="0.4"/>
-          <!-- Terra -->
-          <ellipse cx="70" cy="126" rx="42" ry="6" fill="#5C3D20" opacity="0.5"/>
-          <!-- Planta costela-de-adão / grande folha -->
-          <path d="M70 124 C70 100 66 80 60 58" stroke="#4A9E6B" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-          <!-- folha grande esquerda -->
-          <path d="M60 80 C40 66 18 62 14 44 C10 26 36 20 58 42 C64 50 64 68 60 80Z" fill="#2E7D52" opacity="0.9"/>
-          <!-- nervuras -->
-          <path d="M60 80 C46 62 30 52 18 40" stroke="#1B5E35" stroke-width="1.5" fill="none" opacity="0.5"/>
-          <path d="M52 72 C44 64 36 58 28 54" stroke="#1B5E35" stroke-width="1" fill="none" opacity="0.35"/>
-          <path d="M56 66 C50 60 44 56 38 54" stroke="#1B5E35" stroke-width="1" fill="none" opacity="0.35"/>
-          <!-- folha grande direita -->
-          <path d="M76 70 C96 54 118 50 122 30 C126 10 100 6 80 28 C74 38 72 56 76 70Z" fill="#4A9E6B" opacity="0.85"/>
-          <path d="M76 70 C88 52 104 42 118 28" stroke="#2E7D52" stroke-width="1.5" fill="none" opacity="0.5"/>
-          <path d="M80 64 C90 52 102 46 114 36" stroke="#2E7D52" stroke-width="1" fill="none" opacity="0.35"/>
-          <!-- folha topo pequena -->
-          <path d="M68 50 C52 36 44 16 54 6 C64 -4 78 14 76 36 C75 44 70 50 68 50Z" fill="#3A8A5C" opacity="0.85"/>
-          <!-- detalhe verde na borda do vaso -->
-          <rect x="22" y="132" width="96" height="2" rx="1" fill="#1B5E35" opacity="0.4"/>
-        </svg>
-      </div>
-      <div class="produto-info">
-        <p class="produto-tag">Concreto Verde</p>
-        <h3 class="produto-nome">Vaso Essência</h3>
-        <p class="produto-desc">Cimento com aditivos orgânicos. Minimalista e duradouro para ambientes externos.</p>
-        <div class="produto-footer">
-          <span class="produto-preco">R$ 158</span>
-          <a href="#contato" class="produto-btn">+</a>
-        </div>
+  <!-- Produto 3 -->
+  <div class="produto" id="p3">
+    <div class="produto-visual v3">
+      <!-- Vaso Essência: concreto, cúbico arredondado, faixa verde -->
+      <svg viewBox="0 0 340 420" fill="none" class="produto-svg">
+        <ellipse cx="170" cy="400" rx="108" ry="14" fill="#1A5C32" opacity="0.07"/>
+        <!-- corpo quadrado com cantos suaves -->
+        <rect x="50" y="270" width="240" height="130" rx="8" fill="url(#c1)"/>
+        <rect x="58" y="278" width="224" height="114" rx="6" fill="url(#c2)" opacity="0.4"/>
+        <!-- textura concreto: grain sutil -->
+        <circle cx="80"  cy="292" r="1.5" fill="#3A4E3C" opacity="0.18"/>
+        <circle cx="110" cy="304" r="1.5" fill="#3A4E3C" opacity="0.16"/>
+        <circle cx="145" cy="288" r="1.8" fill="#3A4E3C" opacity="0.18"/>
+        <circle cx="180" cy="312" r="1.5" fill="#3A4E3C" opacity="0.16"/>
+        <circle cx="215" cy="294" r="1.8" fill="#3A4E3C" opacity="0.18"/>
+        <circle cx="250" cy="308" r="1.5" fill="#3A4E3C" opacity="0.16"/>
+        <circle cx="270" cy="286" r="1.8" fill="#3A4E3C" opacity="0.18"/>
+        <circle cx="92"  cy="325" r="1.5" fill="#3A4E3C" opacity="0.14"/>
+        <circle cx="128" cy="335" r="1.8" fill="#3A4E3C" opacity="0.16"/>
+        <circle cx="162" cy="322" r="1.5" fill="#3A4E3C" opacity="0.14"/>
+        <circle cx="198" cy="340" r="1.8" fill="#3A4E3C" opacity="0.16"/>
+        <circle cx="234" cy="326" r="1.5" fill="#3A4E3C" opacity="0.14"/>
+        <circle cx="262" cy="342" r="1.8" fill="#3A4E3C" opacity="0.14"/>
+        <circle cx="74"  cy="358" r="1.5" fill="#3A4E3C" opacity="0.12"/>
+        <circle cx="115" cy="368" r="1.8" fill="#3A4E3C" opacity="0.13"/>
+        <circle cx="155" cy="356" r="1.5" fill="#3A4E3C" opacity="0.12"/>
+        <circle cx="195" cy="372" r="1.8" fill="#3A4E3C" opacity="0.13"/>
+        <circle cx="235" cy="360" r="1.5" fill="#3A4E3C" opacity="0.12"/>
+        <circle cx="270" cy="374" r="1.8" fill="#3A4E3C" opacity="0.12"/>
+        <!-- faixa verde identidade -->
+        <rect x="50" y="270" width="240" height="8" rx="4" fill="#1A5C32" opacity="0.55"/>
+        <!-- faixa dourada -->
+        <rect x="50" y="276" width="240" height="2" rx="1" fill="#C8A951" opacity="0.45"/>
+        <!-- borda topo -->
+        <rect x="40" y="256" width="260" height="18" rx="5" fill="url(#cbrim)"/>
+        <rect x="40" y="256" width="260" height="3" rx="1.5" fill="#1A5C32" opacity="0.5"/>
+        <!-- terra -->
+        <ellipse cx="170" cy="264" rx="116" ry="13" fill="#3A2010" opacity="0.52"/>
+        <!-- Planta: grande folha tropical (filodendro) -->
+        <path d="M170 260 C170 236 164 210 160 186 C156 162 160 136 170 110 C176 92 172 70 170 50" stroke="#2E7D4A" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <!-- Folha 1 esq enorme -->
+        <path d="M162 200
+                 C130 182 92 178 70 152
+                 C48 126 60 96 86 104
+                 C112 112 146 148 162 188
+                 C164 194 162 198 162 200Z" fill="url(#cl1)"/>
+        <path d="M162 200 C130 176 100 156 74 132" stroke="#0F3D20" stroke-width="2.5" fill="none" opacity="0.45"/>
+        <path d="M150 192 C124 172 100 158 80 140" stroke="#0F3D20" stroke-width="1.3" fill="none" opacity="0.3"/>
+        <path d="M156 182 C132 166 110 154 92 144" stroke="#0F3D20" stroke-width="1" fill="none" opacity="0.25"/>
+        <path d="M159 170 C138 158 118 150 102 146" stroke="#0F3D20" stroke-width="1" fill="none" opacity="0.22"/>
+        <!-- recorte folha 1 -->
+        <path d="M118 160 C112 150 112 140 120 138 C128 136 132 148 126 158Z" fill="#F0EBE0" opacity="0.65"/>
+        <path d="M98 174 C90 162 90 150 100 148 C110 146 114 160 106 170Z" fill="#F0EBE0" opacity="0.55"/>
+        <!-- Folha 2 dir enorme -->
+        <path d="M178 186
+                 C210 168 248 164 270 136
+                 C292 108 280 78 254 88
+                 C228 98 196 136 178 176
+                 C176 180 176 184 178 186Z" fill="url(#cl2)"/>
+        <path d="M178 186 C206 160 238 136 264 108" stroke="#0F3D20" stroke-width="2.5" fill="none" opacity="0.45"/>
+        <path d="M186 178 C210 156 236 136 258 114" stroke="#0F3D20" stroke-width="1.3" fill="none" opacity="0.3"/>
+        <path d="M182 170 C206 150 230 134 252 118" stroke="#0F3D20" stroke-width="1" fill="none" opacity="0.25"/>
+        <!-- recorte folha 2 -->
+        <path d="M228 120 C234 112 242 110 246 116 C250 122 244 132 236 130Z" fill="#F0EBE0" opacity="0.6"/>
+        <path d="M210 136 C216 128 224 126 228 132 C232 138 226 148 218 146Z" fill="#F0EBE0" opacity="0.52"/>
+        <!-- Folha topo -->
+        <path d="M168 112 C152 90 142 62 152 46 C162 30 178 48 176 76 C175 90 170 106 168 112Z" fill="url(#cl3)"/>
+        <path d="M168 112 C158 88 154 64 156 48" stroke="#0F3D20" stroke-width="2" fill="none" opacity="0.42"/>
+        <!-- Folha base esq -->
+        <path d="M163 240 C138 228 108 224 96 206 C84 188 96 168 116 176 C136 184 158 216 163 236Z" fill="url(#cl4)" opacity="0.65"/>
+        <defs>
+          <linearGradient id="c1" x1="50" y1="270" x2="290" y2="400" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#5A6E5C"/><stop offset="100%" stop-color="#3A4E3C"/>
+          </linearGradient>
+          <linearGradient id="c2" x1="58" y1="278" x2="282" y2="392" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#7A8E7C"/><stop offset="100%" stop-color="#5A6E5C"/>
+          </linearGradient>
+          <linearGradient id="cbrim" x1="40" y1="256" x2="300" y2="274" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#3A4E3C"/><stop offset="50%" stop-color="#5A6E5C"/><stop offset="100%" stop-color="#3A4E3C"/>
+          </linearGradient>
+          <linearGradient id="cl1" x1="70" y1="96" x2="162" y2="200" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4AAA70"/><stop offset="100%" stop-color="#1A5C32"/>
+          </linearGradient>
+          <linearGradient id="cl2" x1="178" y1="78" x2="270" y2="186" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#3A9060"/><stop offset="100%" stop-color="#1A5C32"/>
+          </linearGradient>
+          <linearGradient id="cl3" x1="142" y1="30" x2="176" y2="112" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4AAA70"/><stop offset="100%" stop-color="#2E7D4A"/>
+          </linearGradient>
+          <linearGradient id="cl4" x1="96" y1="168" x2="163" y2="240" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#3A9060"/><stop offset="100%" stop-color="#2E7D4A"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="produto-info">
+      <span class="prod-num">03</span>
+      <p class="tag">Concreto Verde</p>
+      <h3>Vaso<br/>Essência</h3>
+      <p class="prod-desc">Cimento com aditivos orgânicos e faixa verde característica. Forma cúbica de linhas limpas que se adapta a qualquer ambiente — da varanda ao escritório. Durável e com alma.</p>
+      <ul class="prod-specs">
+        <li><span>Material</span> Cimento + aditivos orgânicos</li>
+        <li><span>Acabamento</span> Polido com faixa verde</li>
+        <li><span>Ideal para</span> Externo · sol direto</li>
+        <li><span>Ciclo</span> Retorno com desconto</li>
+      </ul>
+      <div class="prod-footer">
+        <div class="prod-price">R$ 158</div>
+        <a href="#contato" class="btn-dark">Solicitar</a>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     DIFERENCIAIS
-══════════════════════════════════════ -->
-<section class="diferenciais" id="sobre">
-  <div class="diferenciais-intro">
-    <p class="section-label">Por que Renovata</p>
-    <h2 class="section-heading">Feitos com intenção,<br/>do início ao fim</h2>
-  </div>
-  <div class="diferenciais-grid">
-
-    <div class="diferencial reveal">
-      <svg class="diferencial-icon" viewBox="0 0 44 44" fill="none">
-        <circle cx="22" cy="22" r="20" stroke="#C9A84C" stroke-width="1.5"/>
-        <path d="M22 34 C22 22 12 16 12 8 C12 3 17 1 22 6 C27 1 32 3 32 8 C32 16 22 22 22 34Z" fill="#C9A84C" opacity="0.8"/>
-      </svg>
-      <h3>100% Sustentável</h3>
-      <p>Todos os materiais vêm de fontes renováveis certificadas. Do campo à sua casa.</p>
-    </div>
-
-    <div class="diferencial reveal">
-      <svg class="diferencial-icon" viewBox="0 0 44 44" fill="none">
-        <circle cx="22" cy="22" r="20" stroke="#C9A84C" stroke-width="1.5"/>
-        <path d="M13 30 L22 10 L31 30 L22 25 Z" fill="#C9A84C" opacity="0.8"/>
-        <circle cx="22" cy="32" r="2.5" fill="#C9A84C"/>
-      </svg>
-      <h3>Design Atemporal</h3>
-      <p>Formas que não envelhecem. Criados para durar mais que tendências.</p>
-    </div>
-
-    <div class="diferencial reveal">
-      <svg class="diferencial-icon" viewBox="0 0 44 44" fill="none">
-        <circle cx="22" cy="22" r="20" stroke="#C9A84C" stroke-width="1.5"/>
-        <path d="M11 22 C11 15 16 11 22 11 C28 11 33 15 33 22 C33 29 28 33 22 33 C16 33 11 29 11 22Z" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
-        <path d="M22 13 L24 20 L31 20 L26 24 L28 31 L22 27 L16 31 L18 24 L13 20 L20 20Z" fill="#C9A84C" opacity="0.8"/>
-      </svg>
-      <h3>Impacto Positivo</h3>
-      <p>Parte de cada venda vai para reflorestamento urbano em cidades brasileiras.</p>
-    </div>
-
-    <div class="diferencial reveal">
-      <svg class="diferencial-icon" viewBox="0 0 44 44" fill="none">
-        <circle cx="22" cy="22" r="20" stroke="#C9A84C" stroke-width="1.5"/>
-        <rect x="13" y="27" width="18" height="10" rx="2" fill="#C9A84C" opacity="0.6"/>
-        <path d="M22 9 C15 16 13 22 15 27 C17 32 27 32 29 27 C31 22 29 16 22 9Z" fill="#C9A84C" opacity="0.8"/>
-      </svg>
-      <h3>Biodegradável</h3>
-      <p>Ao final da vida útil, o vaso pode ser compostado ou devolvido à terra naturalmente.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     PROCESSO
-══════════════════════════════════════ -->
+<!-- PROCESSO -->
 <section class="processo" id="processo">
-  <div class="processo-intro">
-    <p class="section-label">Como funciona</p>
-    <h2 class="section-heading">Do pedido à varanda,<br/>com cuidado</h2>
+  <div class="processo-header">
+    <p class="tag">Como funciona</p>
+    <h2>Do pedido à<br/>varanda.</h2>
   </div>
-  <div class="processo-steps">
-    <div class="step reveal">
-      <div class="step-num">1</div>
-      <h3>Escolha</h3>
-      <p>Navegue pela coleção e encontre o vaso ideal para o seu espaço e planta.</p>
+  <div class="processo-lista">
+    <div class="proc-item reveal">
+      <div class="proc-n">01</div>
+      <div class="proc-body">
+        <h4>Escolha</h4>
+        <p>Navegue pela coleção e selecione o vaso certo para o seu espaço e planta.</p>
+      </div>
     </div>
-    <div class="step reveal">
-      <div class="step-num">2</div>
-      <h3>Produzimos</h3>
-      <p>Cada peça é feita sob encomenda em nosso ateliê com materiais selecionados.</p>
+    <div class="proc-item reveal">
+      <div class="proc-n">02</div>
+      <div class="proc-body">
+        <h4>Produzimos</h4>
+        <p>Cada peça é feita sob encomenda no nosso ateliê com materiais selecionados.</p>
+      </div>
     </div>
-    <div class="step reveal">
-      <div class="step-num">3</div>
-      <h3>Entregamos</h3>
-      <p>Embalagem 100% reciclável. Enviamos com cuidado para todo o Brasil.</p>
+    <div class="proc-item reveal">
+      <div class="proc-n">03</div>
+      <div class="proc-body">
+        <h4>Entregamos</h4>
+        <p>Embalagem 100% reciclável. Enviamos com cuidado para todo o Brasil.</p>
+      </div>
     </div>
-    <div class="step reveal">
-      <div class="step-num">4</div>
-      <h3>Renova</h3>
-      <p>Quando quiser trocar, devolvemos com desconto especial para você renovar.</p>
+    <div class="proc-item reveal">
+      <div class="proc-n">04</div>
+      <div class="proc-body">
+        <h4>Renova</h4>
+        <p>Quando quiser trocar, devolvemos com desconto e reutilizamos o material.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="deps">
+  <div class="deps-header">
+    <p class="tag">Depoimentos</p>
+    <h2>O que nossos<br/>clientes dizem.</h2>
+  </div>
+  <div class="deps-grid">
+    <div class="dep reveal">
+      <p class="dep-stars">★★★★★</p>
+      <p class="dep-text">"O Vaso Sereno chegou perfeito. A textura do bambu é incrível e combina com qualquer ambiente. Já pedi mais dois."</p>
+      <div class="dep-autor">
+        <div class="dep-av">MC</div>
+        <div><strong>Mariana Costa</strong><span>São Paulo, SP</span></div>
+      </div>
+    </div>
+    <div class="dep reveal">
+      <p class="dep-stars">★★★★★</p>
+      <p class="dep-text">"Finalmente uma marca que pensa no pós-consumo. Comprei, usei anos e quando quis trocar, ganhei desconto. Impecável."</p>
+      <div class="dep-autor">
+        <div class="dep-av">FA</div>
+        <div><strong>Felipe Andrade</strong><span>Curitiba, PR</span></div>
+      </div>
+    </div>
+    <div class="dep reveal">
+      <p class="dep-stars">★★★★★</p>
+      <p class="dep-text">"Presentei minha mãe com o Vaso Raiz. O padrão geométrico é lindo de perto. Ela pediu mais três."</p>
+      <div class="dep-autor">
+        <div class="dep-av">CM</div>
+        <div><strong>Carolina Meireles</strong><span>Belo Horizonte, MG</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     DEPOIMENTOS
-══════════════════════════════════════ -->
-<section class="depoimentos">
-  <div class="depoimentos-intro">
-    <div>
-      <p class="section-label">Depoimentos</p>
-      <h2 class="section-heading">O que nossos clientes plantaram</h2>
+<!-- CTA FINAL -->
+<section class="cta-final" id="contato">
+  <div class="cta-inner">
+    <p class="tag" style="color:rgba(240,235,224,0.55)">Comece agora</p>
+    <h2>Pronto para<br/><em>renovar?</em></h2>
+    <p>Fale com a gente para montar o conjunto ideal para o seu espaço.</p>
+    <div class="cta-btns">
+      <a href="#colecao" class="btn-gold">Ver coleção</a>
+      <a href="mailto:oi@renovata.com.br" class="btn-ghost-light">oi@renovata.com.br →</a>
     </div>
-  </div>
-  <div class="depoimentos-grid">
-
-    <div class="depoimento reveal">
-      <p class="depoimento-stars">★★★★★</p>
-      <p class="depoimento-text">"O vaso Sereno chegou em perfeito estado. A textura do bambu é incrível e combina perfeitamente com minha decoração. Já pedi mais dois."</p>
-      <p class="depoimento-autor">Mariana Costa</p>
-      <p class="depoimento-local">São Paulo, SP</p>
-    </div>
-
-    <div class="depoimento reveal">
-      <p class="depoimento-stars">★★★★★</p>
-      <p class="depoimento-text">"Finalmente uma empresa que pensa no depois. Comprei, usei por anos e quando quis renovar, eles me deram desconto. Produto e atitude impecáveis."</p>
-      <p class="depoimento-autor">Felipe Andrade</p>
-      <p class="depoimento-local">Curitiba, PR</p>
-    </div>
-
-    <div class="depoimento reveal">
-      <p class="depoimento-stars">★★★★★</p>
-      <p class="depoimento-text">"Presentei minha mãe com o Vaso Raiz. Ela amou tanto que pediu um para cada cômodo. O design é simples e elegante ao mesmo tempo."</p>
-      <p class="depoimento-autor">Carolina Meireles</p>
-      <p class="depoimento-local">Belo Horizonte, MG</p>
-    </div>
-
   </div>
 </section>
 
-<!-- ══════════════════════════════════════
-     CTA
-══════════════════════════════════════ -->
-<section class="cta-section" id="contato">
-  <p class="section-label">Comece agora</p>
-  <h2 class="section-heading">Pronto para renovar seu espaço?</h2>
-  <p>Explore nossa coleção ou fale com a gente para montar o combo perfeito para a sua casa ou escritório.</p>
-  <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-    <a href="#produtos" class="btn-gold">Ver coleção</a>
-    <a href="mailto:oi@renovata.com.br" class="btn-outline">Entrar em contato</a>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     FOOTER
-══════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-top">
-    <div>
-      <img src="logo-renovata.png" alt="Renovata" class="footer-logo-img" />
-      <p class="footer-desc">Vasos sustentáveis para quem acredita que cuidar da natureza começa em casa.</p>
-      <p style="font-size:0.85rem; font-weight:300; color:rgba(201,168,76,0.7);">oi@renovata.com.br</p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo-renovata.png" alt="Renovata"/>
+      <p>Vasos sustentáveis para quem acredita que cuidar da natureza começa em casa.</p>
     </div>
-    <div class="footer-col">
-      <h4>Produtos</h4>
-      <ul>
-        <li><a href="#">Vaso Sereno</a></li>
-        <li><a href="#">Vaso Raiz</a></li>
-        <li><a href="#">Vaso Essência</a></li>
-        <li><a href="#">Kits</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Empresa</h4>
-      <ul>
-        <li><a href="#">Sobre nós</a></li>
-        <li><a href="#">Sustentabilidade</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Imprensa</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Suporte</h4>
-      <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Envios</a></li>
-        <li><a href="#">Trocas</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
+    <div class="footer-cols">
+      <div>
+        <h5>Produtos</h5>
+        <ul><li><a href="#">Vaso Sereno</a></li><li><a href="#">Vaso Raiz</a></li><li><a href="#">Vaso Essência</a></li><li><a href="#">Kits</a></li></ul>
+      </div>
+      <div>
+        <h5>Empresa</h5>
+        <ul><li><a href="#">Sobre nós</a></li><li><a href="#">Sustentabilidade</a></li><li><a href="#">Blog</a></li></ul>
+      </div>
+      <div>
+        <h5>Suporte</h5>
+        <ul><li><a href="#">FAQ</a></li><li><a href="#">Envios</a></li><li><a href="#">Contato</a></li></ul>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Renovata. Todos os direitos reservados.</span>
+    <span>© 2025 Renovata · Todos os direitos reservados</span>
     <span>Feito com 🌱 no Brasil</span>
   </div>
 </footer>

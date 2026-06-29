@@ -1,46 +1,33 @@
-/* ============================================
-   RENOVATA — script.js
-   ============================================ */
+/* RENOVATA — script.js */
 
-/* ── NAV: esconder ao rolar para baixo ── */
-let lastScroll = 0;
-const nav = document.querySelector('nav');
-
+// Nav shadow on scroll
+const nav = document.querySelector('.nav');
 window.addEventListener('scroll', () => {
-  const current = window.scrollY;
-  if (current > lastScroll && current > 100) {
-    nav.style.transform = 'translateY(-100%)';
-    nav.style.transition = 'transform 0.3s ease';
-  } else {
-    nav.style.transform = 'translateY(0)';
-  }
-  lastScroll = current;
+  nav.classList.toggle('shadow', window.scrollY > 20);
 });
 
-/* ── SCROLL REVEAL (Intersection Observer) ── */
+// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, i * 80);
+      setTimeout(() => entry.target.classList.add('visible'), i * 90);
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
-
+}, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-/* ── BOTÃO + dos produtos: feedback visual ── */
-document.querySelectorAll('.produto-btn').forEach(btn => {
-  btn.addEventListener('click', (e) => {
+// Hero fade-up trigger
+document.querySelectorAll('.fade-up').forEach(el => {
+  el.style.animationPlayState = 'running';
+});
+
+// Product add button feedback
+document.querySelectorAll('.card-add').forEach(btn => {
+  btn.addEventListener('click', e => {
     e.preventDefault();
-    const original = btn.textContent;
     btn.textContent = '✓';
-    btn.style.background = '#C9A84C';
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.style.background = '';
-    }, 1800);
+    btn.style.background = 'var(--d2)';
+    setTimeout(() => { btn.textContent = '+'; btn.style.background = ''; }, 1800);
   });
 });
